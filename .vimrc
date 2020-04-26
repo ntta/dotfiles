@@ -1,3 +1,16 @@
+" Disclaimer:
+"   Most of the config in this file are not mine
+"   Please take a look at the vimrc of the maintainer/author:
+"     Amir Salihefendic
+"       http://amix.dk - amix@amix.dk
+"       https://github.com/amix/vimrc
+" 
+" Note:
+"   If you want to install plugins in this file, make sure you
+"   read README.md at 
+"     https://github.com/ntta/dotfiles
+"   If you don't want to, delete Plugins section
+"
 " Sections:
 "   -> Plugins
 "   -> General
