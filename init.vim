@@ -33,6 +33,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'dart-lang/dart-vim-plugin'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 " yggdroot/indentline
@@ -79,6 +80,8 @@ let g:NERDTreeHighlightFoldersFullName = 1 " highlights the folder name
 " fzf
 map <silent> <space>f :FZF<CR>
 
+" mattn/emmet-vim
+let g:user_emmet_leader_key=','
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CoC config 
