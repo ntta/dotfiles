@@ -34,6 +34,7 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'mattn/emmet-vim'
+Plug 'mhinz/vim-startify'
 call plug#end()
 
 " yggdroot/indentline
