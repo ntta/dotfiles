@@ -17,7 +17,16 @@
   ],
   "eslint.enable": false,
   "prettier.singleQuote": true,
+  "javascript.suggestionActions.enabled": false,
   "html.format.wrapLineLength": 200,
   "html.autoClosingTags": true,
-  "html.format.indentInnerHtml": true
+  "html.format.indentInnerHtml": true,
+  "markdownlint.config": { "line_length": false },
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.keyMappings": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit"
+  }
 }
