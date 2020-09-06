@@ -29,9 +29,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Start screen
   Plug 'mhinz/vim-startify'
 
-  " Dart lang
-  Plug 'dart-lang/dart-vim-plugin'
-
   " Version control
   Plug 'mhinz/vim-signify'
   Plug 'tpope/vim-fugitive'
@@ -55,5 +52,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Emmet
   Plug 'mattn/emmet-vim'
+
+  " Floaterm
+  Plug 'voldikss/vim-floaterm'
+
+  " Languages
+  Plug 'pangloss/vim-javascript'
+  Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
