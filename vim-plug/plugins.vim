@@ -57,7 +57,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'voldikss/vim-floaterm'
 
   " Languages
+  Plug 'maxmellon/vim-jsx-pretty'
   Plug 'pangloss/vim-javascript'
+
+  Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
+
   Plug 'dart-lang/dart-vim-plugin'
 
 call plug#end()
