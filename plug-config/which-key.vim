@@ -1,12 +1,10 @@
 " Map leader to which_key
-nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
-vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>
+nnoremap <silent> <leader> :silent WhichKey '_'<CR>
+vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '_'<CR>
 
-" Create map to add keys to
-let g:which_key_map =  {}
 " Define a separator
 let g:which_key_sep = '→'
-" set timeoutlen=100
+" set timeoutlen=200
 
 
 " Not a fan of floating windows for this
@@ -23,42 +21,40 @@ autocmd! FileType which_key
 autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
-" Single mappings
-let g:which_key_map['/'] = [ '<Plug>NERDCommenterToggle'  , 'comment' ]
-let g:which_key_map['e'] = [ ':CocCommand explorer'       , 'explorer' ]
-let g:which_key_map['f'] = [ ':CocCommand prettier.formatFile'                     , 'format file' ]
-let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
-let g:which_key_map['S'] = [ ':Startify'                  , 'start screen' ]
-let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
-let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
+" Create map to add keys to
+let g:which_key_map =  {}
+let g:which_key_map['H'] = [ ':Startify', '[H]ome screen' ]
+let g:which_key_map['h'] = [ '<C-W>s', 'split [h]orizonally' ]
+let g:which_key_map['v'] = [ '<C-W>v', 'split [v]ertically' ]
+let g:which_key_map['F'] = [ ':Filetypes', 'change [F]iletype' ]
+
+" g is for git
+let g:which_key_map['g'] = {
+  \ 'name': '+[g]it',
+  \ 'b': [':Git blame' , '[b]lame'],
+  \ 'w': [':GBrowse'   , 'file on [w]eb'],
+  \ 'd': [':Gdiffsplit', 'show [d]iff'],
+  \ }
+
+let g:which_key_map['y'] = {
+  \ 'name': '+histor[y]',
+  \ 'f': [':History' , '[f]iles'],
+  \ 'c': [':History:'   , '[c]ommands'],
+  \ 'd': [':Gdiffsplit', 'show [d]iff'],
+  \ }
 
 " s is for search
-let g:which_key_map.s = {
-      \ 'name' : '+search' ,
-      \ '/' : [':History/'     , 'history'],
-      \ ';' : [':Commands'     , 'commands'],
-      \ 'a' : [':Ag'           , 'text Ag'],
-      \ 'b' : [':BLines'       , 'current buffer'],
-      \ 'B' : [':Buffers'      , 'open buffers'],
-      \ 'c' : [':Commits'      , 'commits'],
-      \ 'C' : [':BCommits'     , 'buffer commits'],
-      \ 'g' : [':GFiles'       , 'git files'],
-      \ 'G' : [':GFiles?'      , 'modified git files'],
-      \ 'h' : [':History'      , 'file history'],
-      \ 'H' : [':History:'     , 'command history'],
-      \ 'l' : [':Lines'        , 'lines'] ,
-      \ 'm' : [':Marks'        , 'marks'] ,
-      \ 'M' : [':Maps'         , 'normal maps'] ,
-      \ 'p' : [':Helptags'     , 'help tags'] ,
-      \ 'P' : [':Tags'         , 'project tags'],
-      \ 's' : [':Snippets'     , 'snippets'],
-      \ 'S' : [':Colors'       , 'color schemes'],
-      \ 't' : [':Rg'           , 'text Rg'],
-      \ 'T' : [':BTags'        , 'buffer tags'],
-      \ 'w' : [':Windows'      , 'search windows'],
-      \ 'y' : [':Filetypes'    , 'file types'],
-      \ 'z' : [':FZF'          , 'FZF'],
+let g:which_key_map['s'] = {
+      \ 'name' : '+[s]earch' ,
+      \ 'b' : [':BLines'       , 'current [b]uffer'],
+      \ 'B' : [':Buffers'      , 'open [B]uffers'],
+      \ 'g' : [':GFiles?'      , 'modified [g]it files'],
+      \ 'l' : [':Lines'        , '[l]ines'] ,
+      \ 't' : [':Rg'           , '[t]ext in project'],
+      \ 'f' : [':FZF'          , '[f]iles in project'],
+      \ 'c' : [':Commits'      , '[c]ommits'],
+      \ 'H' : [':Helptags'     , '[H]elp tags'] ,
       \ }
 
 " Register which key map
-call which_key#register('<Space>', "g:which_key_map")
+call which_key#register('_', "g:which_key_map")

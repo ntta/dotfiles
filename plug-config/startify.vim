@@ -10,8 +10,7 @@ let g:startify_lists = [
         \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
         \ ]
 let g:startify_bookmarks = [
-        \ { 'h': '~/Projects/flutter/half_price_deals/lib/main.dart' },
-        \ { 'd': '~/Projects/data-scraper-ts/src/index.ts' },
-        \ { 'S': '~/StepInsight' },
+        \ { 'S': '~/src/stepinsight/' },
+        \ { 'A': '~/src/aaron/' },
         \ { 's': '~/.config/nvim' },
         \ ]

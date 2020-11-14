@@ -1,21 +1,25 @@
 {
   "codeLens.enable": true,
   "suggest.echodocSupport": true,
-  "diagnostic.virtualText": true,
+  "diagnostic.enable": true,
+  "diagnostic.level": "error",
   "suggest.noselect": false,
   "eslint.enable": false,
   "prettier.singleQuote": true,
+  "prettier.printWidth": 120,
   "javascript.suggestionActions.enabled": false,
   "html.format.enable": true,
   "html.format.wrapLineLength": 200,
   "html.autoClosingTags": true,
   "html.format.indentInnerHtml": true,
-  "markdownlint.config": { "line_length": false },
   "explorer.width": 40,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
-  }
+  },
+  "coc.preferences.formatOnSaveFiletypes": [
+    "dart"
+  ]
 }
