@@ -13,6 +13,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Themes
   Plug 'morhetz/gruvbox'
+  Plug 'ryanoasis/vim-devicons'
 
   " Status Line
   Plug 'vim-airline/vim-airline'

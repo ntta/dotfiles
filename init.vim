@@ -55,3 +55,4 @@ source $HOME/.config/nvim/plug-config/nerd-commenter.vim
 source $HOME/.config/nvim/plug-config/emmet.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/javascript.vim
+source $HOME/.config/nvim/plug-config/dart.vim

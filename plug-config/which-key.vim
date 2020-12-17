@@ -27,6 +27,7 @@ let g:which_key_map['H'] = [ ':Startify', '[H]ome screen' ]
 let g:which_key_map['h'] = [ '<C-W>s', 'split [h]orizonally' ]
 let g:which_key_map['v'] = [ '<C-W>v', 'split [v]ertically' ]
 let g:which_key_map['F'] = [ ':Filetypes', 'change [F]iletype' ]
+let g:which_key_map['f'] = [ ':CocCommand prettier.formatFile', '[f]ormat file' ]
 
 " g is for git
 let g:which_key_map['g'] = {

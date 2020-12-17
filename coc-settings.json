@@ -2,7 +2,7 @@
   "codeLens.enable": true,
   "suggest.echodocSupport": true,
   "diagnostic.enable": true,
-  "diagnostic.level": "error",
+  "diagnostic.level": "warning",
   "suggest.noselect": false,
   "eslint.enable": false,
   "prettier.singleQuote": true,
@@ -19,7 +19,6 @@
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
-  "coc.preferences.formatOnSaveFiletypes": [
-    "dart"
-  ]
+  "coc.preferences.formatOnTypeFiletypes": [ "json "],
+  "flutter.openDevLogSplitCommand": "botright 10split"
 }
