@@ -12,6 +12,9 @@ set -g theme_hostname always
 # Tmux
 alias ide="tmux split-window -v -p 30; tmux split-window -h -p 66; tmux split-window -h -p 50"
 
+# Notes
+alias notes="mkdir -p ~/src/notes; cd ~/src/notes; vim (echo -n (date +%d-%m-%Y)).md"
+
 # aliases
 alias ls "ls -p -G"
 alias la "ls -A"
@@ -29,11 +32,6 @@ set -gx PATH ~/.local/bin $PATH
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
 
-# Go
-set -g GOPATH $HOME/go
-set -gx PATH $GOPATH/bin $PATH
-
-# NVM
 function nvm
     bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end
