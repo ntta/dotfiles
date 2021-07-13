@@ -7,7 +7,7 @@ lualine.setup {
     theme = 'gruvbox',
     section_separators = {'', ''},
     component_separators = {'', ''},
-    disabled_filetypes = {}
+    disabled_filetypes = { 'defx' }
   },
   sections = {
     lualine_a = {'mode'},

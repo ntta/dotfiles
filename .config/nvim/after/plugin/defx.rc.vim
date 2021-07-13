@@ -1,14 +1,13 @@
 if !exists('g:loaded_defx') | finish | endif
 
 " Define mappings
-"cnoreabbrev sf Defx -listed -new
-"      \ -columns=indent:mark:icon:icons:filename:git:size
-"      \ -buffer-name=tab`tabpagenr()`<CR>
-nnoremap <silent>sf :<C-u>Defx -listed -resume
-      \ -columns=indent:mark:icon:icons:filename:git:size
+nnoremap <silent> <leader>e :Defx -listed -resume -toggle
+      \ -split=vertical
+      \ -direction=topleft
+      \ -columns=indent:mark:icon:space:icons:space:filename:git:size
       \ -buffer-name=tab`tabpagenr()`
-      \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
-nnoremap <silent>fi :<C-u>Defx -new `expand('%:p:h')` -search=`expand('%:p')`<CR>
+      \ `expand('%:p:h')` -search=`expand('%:p')`
+      \ <bar> IndentLinesDisable<CR>
 
 autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
@@ -81,6 +80,7 @@ call defx#custom#column('icon', {
       \ 'opened_icon': '▾',
       \ 'root_icon': ' ',
       \ })
+
 call defx#custom#column('git', 'indicators', {
   \ 'Modified'  : 'M',
   \ 'Staged'    : '✚',

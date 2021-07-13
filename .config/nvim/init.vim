@@ -39,7 +39,7 @@ set autoindent                          " Good auto indent
 set laststatus=2                        " Always display the status line
 set relativenumber                      " Line numbers
 set cursorline                          " Enable highlighting of the current line
-set showtabline=2                       " Always show tabs
+set showtabline=0                       " 0 = hide tabs, 2 = always show tabs
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
