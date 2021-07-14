@@ -10,10 +10,28 @@ set -g fish_prompt_pwd_dir_length 1
 set -g theme_hostname always
 
 # Tmux
-alias ide="tmux split-window -v -p 30; tmux split-window -h -p 66; tmux split-window -h -p 50"
+alias ide2="tmux split-window -v -p 20"
+alias ide4="tmux split-window -v -p 30; tmux split-window -h -p 66; tmux split-window -h -p 50"
 
 # Notes
-alias notes="mkdir -p ~/src/notes; cd ~/src/notes; vim (echo -n (date +%d-%m-%Y)).md"
+# alias notes="mkdir -p ~/src/notes; cd ~/src/notes; vim (echo -n (date +%b\ %d\ %Y)).md"
+function notes --argument-names filename
+  set -l today (date +%b-%d-%Y)
+  set -l todayFilename $today.md
+
+  mkdir -p ~/src/notes
+  cd ~/src/notes
+
+  if test (count $argv) = 0
+    if not test -f $todayFilename
+      echo \# $today > $todayFilename
+    end
+
+    vim $todayFilename
+  else
+    vim $filename.md
+  end
+end
 
 # aliases
 alias ls "ls -p -G"
@@ -57,3 +75,4 @@ set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
+fish_add_path /usr/local/opt/postgresql@11/bin

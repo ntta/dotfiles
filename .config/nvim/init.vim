@@ -29,7 +29,7 @@ set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
 set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
-set conceallevel=0                      " So that I can see `` in markdown files
+"set conceallevel=0                      " So that I can see `` in markdown files
 set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2                        " Change the number of space characters inserted for indentation
 set smarttab                            " Makes tabbing smarter will realize you have 2 vs 4
@@ -98,6 +98,12 @@ endif
 
 "}}}
 
+" Imports "{{{
+" ---------------------------------------------------------------------
+runtime ./plug.vim
+runtime ./maps.vim
+"}}}
+
 " File types "{{{
 " ---------------------------------------------------------------------
 " JavaScript
@@ -105,7 +111,7 @@ au BufNewFile,BufRead *.es6 setf javascript
 " TypeScript
 au BufNewFile,BufRead *.tsx setf typescriptreact
 " Markdown
-au BufNewFile,BufRead *.md set filetype=markdown
+au BufNewFile,BufRead *.md set filetype=markdown | set conceallevel=0
 " Flow
 au BufNewFile,BufRead *.flow set filetype=javascript
 
@@ -114,12 +120,6 @@ set suffixesadd=.js,.es,.jsx,.json,.css,.less,.sass,.styl,.php,.py,.md
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
-"}}}
-
-" Imports "{{{
-" ---------------------------------------------------------------------
-runtime ./plug.vim
-runtime ./maps.vim
 "}}}
 
 " THEME "{{{

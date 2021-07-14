@@ -1,9 +1,9 @@
 if !exists('g:loaded_defx') | finish | endif
 
 " Define mappings
-nnoremap <silent> <leader>e :Defx -listed -resume -toggle
-      \ -split=vertical
-      \ -direction=topleft
+nnoremap <silent> <C-e> :Defx -listed -resume -toggle
+      "\ -split=horizontal
+      "\ -direction=topleft
       \ -columns=indent:mark:icon:space:icons:space:filename:git:size
       \ -buffer-name=tab`tabpagenr()`
       \ `expand('%:p:h')` -search=`expand('%:p')`
